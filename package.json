@@ -1,0 +1,64 @@
+{
+  "name": "whatsapp-chat-parser",
+  "version": "1.0.0",
+  "description": "A robust TypeScript library for parsing and analyzing WhatsApp chat exports with support for media, polls, calls, and multilingual content",
+  "author": "Mehdi Asadli <asadlimehdi25@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "deno": ">=1.37.0"
+  },
+  "scripts": {
+    "build": "deno run --allow-read --allow-write build.ts",
+    "typecheck": "deno check src/index.ts",
+    "lint": "deno lint src/",
+    "format": "deno fmt src/",
+    "test": "deno test",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehdiasadli/whatsapp-chat-parser.git"
+  },
+  "keywords": [
+    "whatsapp",
+    "parser",
+    "chat",
+    "message",
+    "analysis",
+    "typescript",
+    "deno",
+    "media",
+    "polls",
+    "calls"
+  ],
+  "bugs": {
+    "url": "https://github.com/mehdiasadli/whatsapp-chat-parser/issues"
+  },
+  "homepage": "https://github.com/mehdiasadli/whatsapp-chat-parser#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "typescript": "^5.3.3"
+  }
+}
